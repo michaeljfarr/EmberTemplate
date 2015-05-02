@@ -1,0 +1,46 @@
+/**
+ * colours
+ *
+ * Note: IE9 requires full hex colour declarations #cccccc, not #ccc
+ * for  css gradients to render correctly)
+ */
+
+// Greys
+$white:    #fff;
+$black:    #000;
+$black-90: #1f1f1f; // (88%)
+$black-80: #333;
+$black-70: #4d4d4d;
+$black-60: #666;
+$black-50: #808080;
+$black-40: #999;
+$black-30: #b3b3b3;
+$black-20: #ccc;
+$black-10: #ddd; // (12%)
+$black-5:  #f2f2f2;
+$black-0:  $white;
+
+
+// Brand
+$msd-teal: #52aca8;
+$msd-purple: #640085;
+$msd-purple-light: #565294;
+$msd-purple-dark: #121f6b;
+
+// Links
+$link: #3c99c2;
+$link: #08b2e3;
+
+// spacing units
+$h: 20px;
+$v: $h;
+
+$sidebar-width: 250px;
+
+// Temp:
+$black-10: $black-5;
+$black-10: rgba(0, 0, 0, .05);
+
+// Dev overrides
+$black-10: rgba(200, 223, 232, .15);
+$black-10: rgba($link, .1);

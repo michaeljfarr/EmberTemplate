@@ -1,0 +1,24 @@
+<h2>My appointments</h2>
+<br>
+<ul class="AppointmentSummaryList">
+  {{#each appointment in appointments}}
+    <li class="AppointmentSummary-appointment Media">
+      {{#link-to 'appointment' appointment.id classNames="AppointmentSummary-appointment-link u-linkClean"}}
+        <div class="AppointmentSummary-cal Media-object u-textCenter">
+          <span class="AppointmentSummary-day">{{format-date appointment.date 'ddd'}}</span><br>
+          <span class="AppointmentSummary-date"><b>{{format-date appointment.date 'D'}}</b></span><br>
+          <span class="AppointmentSummary-month">{{format-date appointment.date 'MMM'}}</span>
+        </div>
+        <div class="AppointmentSummary-details Media-body">
+          <span class="AppointmentSummary-relativeTime u-floatRight">{{relative-time appointment.date}}</span>
+          <span class="AppointmentSummary-relativeTime u-floatRight">{{appointment.relativeTime}}</span>
+          <span class="AppointmentSummary-subType"><b>{{appointment.subType}}</b></span><br>
+          <span class="AppointmentSummary-type">{{appointment.type}}</span><br>
+          <span class="AppointmentSummary-time">{{appointment.time}}</span>
+          <span class="AppointmentSummary-address">{{appointment.address}}</span>
+        </div>
+      {{/link-to}}
+    </li>
+    <br>
+  {{/each}}
+</ul>

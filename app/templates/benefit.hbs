@@ -1,0 +1,71 @@
+<h2>My benefits</h2>
+<br>
+<div class="Table">
+  <div class="Table-row Table-cell--desktop Sidebar u-sm-hidden u-md-hidden" style="padding-right: 20px;">
+    {{#each benefit in benefits}}
+      {{#link-to "benefit" benefit.id classNames="Button Button-full"}}
+        {{benefit.type}}
+      {{/link-to}}
+      <br>
+      <br>
+    {{/each}}
+  </div>
+  <div class="Table-row Table-cell--desktop">
+    <h3>{{model.type}}</h3>
+    <span class="u-cf">
+      <a href="" class="u-floatRight">
+        See next benefit
+      </a>
+    </span>
+    <div class="BenefitView u-cf">
+      <span class="BenefitView-day">To bank on {{benefit.nextPaymentDate}}</span>
+      <span class="BenefitView-amount u-floatRight"><b>${{benefit.nextPaymentAmmount}}</b></span>
+    </div>
+    <br>
+    <br>
+    <h3>Payment details</h3>
+    <br>
+    <table class="BenefitsTable">
+      <tbody>
+        <tr>
+          <th class="u-textLeft">Benfits</th>
+          <th class="u-textRight">Amount</th>
+        </tr>
+        <tr>
+          <td>Job seeker support</td>
+          <td class="u-textRight">$210.77</td>
+        </tr>
+        <tr>
+          <td>Declared income $40.56</td>
+          <td class="u-textRight">-$10.00</td>
+        </tr>
+        <tr>
+          <td>Accommodation supplement</td>
+          <td class="u-textRight">$75.00</td>
+        </tr>
+        <tr>
+          <td>Disability allowance</td>
+          <td class="u-textRight">$25.00</td>
+        </tr>
+        <tr>
+          <th class="u-textLeft">Deductions</th>
+          <th class="u-textRight">&nbsp;</th>
+        </tr>
+        <tr>
+          <td>Court fines</td>
+          <td class="u-textRight">-$15.00</td>
+        </tr>
+        <tr>
+          <td>IRD child support</td>
+          <td class="u-textRight">-$210.77</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><b>Total payment</b></td>
+          <td class="u-textRight"><b>$204.65</b></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>

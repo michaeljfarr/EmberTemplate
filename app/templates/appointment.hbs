@@ -1,0 +1,62 @@
+<h2>{{appointment.subType}}</h2>
+<br>
+<div class="Table">
+  <div class="Table-row Table-cell--desktop Sidebar u-sm-hidden u-md-hidden" style="padding-right: 20px;">
+    {{#each appointment in appointments}}
+      {{#link-to 'appointment' appointment.id classNames="Button Button-full"}}
+        <span class="AppointmentSummary-subType"><b>{{appointment.subType}}</b></span><br>
+        <span class="AppointmentSummary-day">{{appointment.date}}</span>
+      {{/link-to}}
+      <br>
+      <br>
+    {{/each}}
+  </div>
+  <div class="Table-row Table-cell--desktop">
+    <ul class="AppointmentSummaryList">
+        <li class="AppointmentSummary-appointment Media">
+            <div class="AppointmentSummary-cal Media-object u-textCenter">
+              <span class="AppointmentSummary-day">{{format-date appointment.date 'ddd'}}</span><br>
+              <span class="AppointmentSummary-date"><b>{{format-date appointment.date 'D'}}</b></span><br>
+              <span class="AppointmentSummary-month">{{format-date appointment.date 'MMM'}}</span>
+            </div>
+            <div class="AppointmentSummary-details Media-body">
+              <span class="AppointmentSummary-relativeTime u-floatRight">{{relative-time appointment.date}}</span>
+              <span class="AppointmentSummary-subType"><b>{{appointment.subType}}</b></span><br>
+              <span class="AppointmentSummary-type">{{appointment.type}}</span><br>
+              <span class="AppointmentSummary-time">{{appointment.time}}</span>
+              <span class="AppointmentSummary-address">{{appointment.address}}</span>
+            </div>
+        </li>
+      <br>
+    </ul>
+  </div>
+</div>
+
+<!--
+<h2 class="">Documents to bring</h2>
+<ul class="Checklist">
+  <li class="Checklist-item">
+    <div class="Media">
+      <img class="Media-object Checklist-icon" src="assets/images/checklist-tick.png">
+      <p class="Media-body Checklist-body">
+        Current CV
+      </p>
+    </div>
+  </li>
+  <li class="Checklist-item">
+    <div class="Media">
+      <img class="Media-object Checklist-icon" src="assets/images/checklist-tick.png">
+      <p class="Media-body Checklist-body">
+        Details of your work qualifications (for example, training certificates and references from employees)
+      </p>
+    </div>
+  </li>
+  <li class="Checklist-item">
+    <div class="Media">
+      <img class="Media-object Checklist-icon" src="assets/images/checklist-tick.png">
+      <p class="Media-body Checklist-body">
+        A medical certificate and a completed Self-Assessment questionaire if you have a health condition, injury or disability that stops you working full-time
+      </p>
+    </div>
+  </li>
+</ul> -->
